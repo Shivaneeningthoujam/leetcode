@@ -1,6 +1,6 @@
 package leetcode;
 
-public class reverseNumber {
+public class digitsNum {
     public static void revNum(int num) {
         // Reverse the number to extract digits in the correct order
         int rev = 0;
