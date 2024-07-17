@@ -27,13 +27,19 @@ public class itinerary {
         HashMap<String, String> tickets = new HashMap<>();
         tickets.put("Chennai", "Bengaluru");
         tickets.put("Mumbai", "Delhi");
-        tickets.put("Goa ", "Chennai");
+        tickets.put("Goa", "Chennai");
+        // NOTE: DONT ADD EXTRA SPACE WHILE DECLARING KEYS>>ELSE U GET
+        // ERROR!!!!!!!!!!!!!!!!!!
+        // there is a small issue related to the way the cities are being added to the
+        // HashMap.
+        // Specifically, there is an extra space after "Goa " which causes the city to
+        // be treated as a different key.
         tickets.put("Delhi", "Goa");
 
         String start = getStart(tickets);
 
         while (tickets.containsKey(start)) {
-            System.out.println(start + "-->");
+            System.out.print(start + "-->");
             start = tickets.get(start);
         }
         System.out.println(start);
